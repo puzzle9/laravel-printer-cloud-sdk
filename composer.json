@@ -1,0 +1,34 @@
+{
+  "name": "puzzle9/laravel-printer-cloud-sdk",
+  "description": "适用于 laravel 的云打印机",
+  "keywords": [
+    "laravel",
+    "laravel-printer-cloud-sdk",
+    "飞鸽云 feieyun"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Puzzle9\\PrinterCloudSdk\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Puzzle9\\PrinterCloudSdk\\ServiceProvider"
+      ],
+      "aliases": {
+        "PrinterCloudSdk": "Puzzle9\\PrinterCloudSdk\\PrinterCloudSdk"
+      }
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": ">=7.0",
+    "illuminate/http": ">=7.0"
+  },
+  "require-dev": {
+    "laravel/framework": "^8.61"
+  }
+}
