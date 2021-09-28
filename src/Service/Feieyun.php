@@ -93,10 +93,11 @@ class Feieyun implements Service
     
     public function printTxt($sn, $content, $data = [])
     {
-        return $this->request('Open_printMsg', array_merge([
-            $sn,
-            $content,
-        ], $data));
+        $row = [
+                'sn'      => $sn,
+                'content' => $content,
+            ] + $data;
+        return $this->request('Open_printMsg', $row);
     }
     
     public function printCleanAll($sn)
